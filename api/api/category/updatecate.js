@@ -8,14 +8,14 @@ module.exports = function(req,res){
   categoryModel.updateOne(
     {"_id":id},   
     req.query,
-    function(err,doc){
+    function(err){
         if(err){
                 return console.log(err);
             }
 
         res.json({
           status:'200',
-          msg:"更改数据成功！"
+          msg:"添加文章成功！"
         })
 
     })
